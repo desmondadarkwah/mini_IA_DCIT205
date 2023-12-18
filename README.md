@@ -15,9 +15,31 @@ npm install
 ### Start the server:
 node index.js
 
-## Access the API at http://localhost:3000/api/patients.
+### Access the API at http://localhost:3000/api/patients.
 
-Contributors
+### API Endpoints
+### Patient Registration:
+POST/api/patients
+Request Body Example:
+{"ID": "12345", "surname": "Doe", "otherNames": "John", ...}
+
+### Start Encounter:
+### POST /api/patients/:patientId/encounter
+Request Body Example:
+{"date": "2023-12-18", "time": "10:30 AM", "encounterType": "OPD"}
+
+### Submit Vitals:
+### POST /api/patients/:patientId/vitals
+Request Body Example:
+{"bloodPressure": "120/80", "temperature": "98.6", ...}
+
+### View List of Patients:
+GET /api/patients
+
+### View Patient Details:
+GET /api/patients/:patientId
+
+## Contributors
 [Desmond Adarkwa]
 Feel free to contribute or report issues!
 
